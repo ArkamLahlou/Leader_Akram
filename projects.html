@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leader Akram - المشاريع الحالية</title>
+    <style>
+        /* الألوان الرئيسية المتطابقة مع index.html */
+        :root {
+            --bg-color: #1a1a1a;
+            --card-bg: #2d2d2d;
+            --text-color: #e0e0e0;
+            --gold-color: #ffd700;
+            --accent-color: #00d2ff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding-top: 50px;
+        }
+
+        .projects-header {
+            color: var(--gold-color);
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.2rem;
+        }
+
+        .projects-grid {
+            width: 90%;
+            max-width: 800px;
+            display: grid;
+            gap: 20px;
+            padding-bottom: 50px;
+        }
+
+        /* تنسيق بطاقة المشروع */
+        .project-card {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-right: 5px solid var(--gold-color); /* شريط ذهبي جانبي */
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+        }
+
+        .project-card h3 {
+            color: var(--gold-color);
+            margin-top: 0;
+            font-size: 1.4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .project-card p {
+            color: #ccc;
+            line-height: 1.7;
+            margin-top: 15px;
+        }
+
+        /* شارات حالة المشروع */
+        .status {
+            font-size: 0.9rem;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .status.active {
+            background-color: rgba(0, 210, 255, 0.2);
+            color: var(--accent-color);
+        }
+
+        .status.completed {
+            background-color: rgba(255, 215, 0, 0.2);
+            color: var(--gold-color);
+        }
+
+        /* تنسيق زر العودة */
+        .back-btn {
+            display: block;
+            margin: 30px auto;
+            padding: 10px 20px;
+            background-color: var(--gold-color);
+            color: #000;
+            text-decoration: none;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            width: 200px;
+        }
+
+        .back-btn:hover {
+            background-color: #ffc400;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="projects-header">📝 المشاريع الحالية والإنجازات</h1>
+
+    <div class="projects-grid">
+        
+        <div class="project-card">
+            <h3>
+                تطوير منصة القيادة الرقمية
+                <span class="status active">قيد التنفيذ ⚙️</span>
+            </h3>
+            <p>
+                الإشراف على إنشاء نظام متكامل لإدارة الفرق والموارد عن بعد. يهدف المشروع إلى رفع كفاءة العمل بنسبة 20% خلال الربع القادم.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <h3>
+                إطلاق الحملة التوعوية للابتكار
+                <span class="status completed">مكتمل ✅</span>
+            </h3>
+            <p>
+                تم بنجاح قيادة حملة توعوية استمرت 6 أسابيع لغرس ثقافة الابتكار وحل المشكلات الإبداعي داخل المؤسسة.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <h3>
+                استراتيجية التوسع الجديدة
+                <span class="status active">قيد التنفيذ ⏳</span>
+            </h3>
+            <p>
+                وضع خطة استراتيجية لفتح أسواق جديدة في المنطقة. تتضمن الخطة تحليل السوق، وتوزيع الموارد، وتحديد الأهداف المالية للسنوات الثلاث القادمة.
+            </p>
+        </div>
+
+    </div>
+
+    <a href="index.html" class="back-btn">العودة إلى الملف الشخصي</a>
+
+</body>
+</html>
