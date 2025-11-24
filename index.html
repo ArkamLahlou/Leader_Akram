@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leader Akram - الملف الشخصي</title>
+    <style>
+        /* الألوان والخطوط الجديدة - وضع القيادة الليلي */
+        :root {
+            --bg-color: #1a1a1a;       /* خلفية سوداء رمادية */
+            --card-bg: #2d2d2d;        /* لون البطاقة */
+            --text-color: #e0e0e0;     /* نص فاتح */
+            --gold-color: #ffd700;     /* لون ذهبي للعناوين */
+            --accent-color: #00d2ff;   /* أزرق سماوي للأزرار */
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* خلفية رأس الصفحة */
+        .header-bg {
+            height: 200px;
+            width: 100%;
+            background: linear-gradient(45deg, #000000, #434343);
+            position: absolute;
+            top: 0;
+            z-index: -1;
+            border-bottom: 4px solid var(--gold-color);
+        }
+
+        /* الحاوية الرئيسية */
+        .profile-card {
+            margin-top: 100px;
+            background-color: var(--card-bg);
+            width: 90%;
+            max-width: 500px;
+            border-radius: 20px;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+            position: relative;
+            border: 1px solid #444;
+        }
+
+        /* تنسيق الصورة */
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--gold-color); /* إطار ذهبي */
+            margin-top: -120px; /* سحب الصورة للأعلى */
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+
+        /* النصوص */
+        h1 {
+            color: var(--gold-color);
+            margin: 15px 0 5px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .subtitle {
+            color: #aaa;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .bio {
+            line-height: 1.8;
+            font-size: 1rem;
+            color: #ccc;
+            margin-bottom: 30px;
+            border-top: 1px solid #444;
+            border-bottom: 1px solid #444;
+            padding: 20px 0;
+        }
+
+        /* زر الإعدادات العائم */
+        .settings-fab {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--gold-color), #ffa500);
+            border-radius: 50%;
+            border: none;
+            color: #000;
+            font-size: 28px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+            transition: all 0.3s ease;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .settings-fab:hover {
+            transform: scale(1.1) rotate(45deg);
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
+        }
+
+        /* القائمة الجانبية */
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 200;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.95);
+            overflow-x: hidden;
+            transition: 0.4s;
+            padding-top: 60px;
+            backdrop-filter: blur(5px);
+            border-right: 1px solid #333;
+        }
+
+        .sidebar a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+            text-align: right;
+            border-bottom: 1px solid #222;
+        }
+
+        .sidebar a:hover {
+            color: var(--gold-color);
+            background-color: #222;
+            padding-right: 35px; /* حركة بسيطة عند التحويم */
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 20px;
+            font-size: 40px;
+            margin-left: 0;
+            border: none;
+        }
+
+        /* شارة الحالة (Status Badge) */
+        .badge {
+            background-color: rgba(255, 215, 0, 0.1);
+            color: var(--gold-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            border: 1px solid var(--gold-color);
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="header-bg"></div>
+
+    <div class="profile-card">
+        <img src="FB_IMG_1763942634879.jpg" alt="Leader Akram" class="profile-img">
+        
+        <h1>Leader Akram</h1>
+        <span class="badge">Visionary Leader 👑</span>
+        
+        <div class="bio">
+            <p>
+                "القيادة ليست مجرد لقب، بل هي القدرة على تحويل الرؤية إلى واقع."
+                <br><br>
+                أهلاً بك في مساحتي الخاصة. هنا حيث تلتقي الأفكار بالطموح. أسعى دائماً للتطوير المستمر، وقيادة المشاريع نحو النجاح بلمسة إبداعية واستراتيجية محكمة.
+            </p>
+        </div>
+
+        <div style="color: #666; font-size: 0.8rem;">
+            All Systems Operational <span style="color: #0f0;">●</span>
+        </div>
+    </div>
+
+    <button class="settings-fab" onclick="toggleNav()">⚙️</button>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <h2 style="text-align: center; color: white; margin-bottom: 30px;">لوحة التحكم</h2>
+        <a href="#">📊 الإحصائيات</a>
+        <a href="#">📝 المشاريع الحالية</a>
+        <a href="#">📷 معرض الصور</a>
+        <a href="#">🔒 إعدادات الخصوصية</a>
+        <a href="#">🚪 تسجيل الخروج</a>
+    </div>
+
+    <script>
+        var isOpen = false;
+
+        function toggleNav() {
+            if (isOpen) {
+                closeNav();
+            } else {
+                openNav();
+            }
+        }
+
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "280px";
+            isOpen = true;
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            isOpen = false;
+        }
+    </script>
+
+</body>
+</html>
